@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container'
+
 import './App.scss';
+import Tasks from './components/tasks/Tasks';
 import Header from './components/header/Header';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -12,6 +15,9 @@ class App extends Component {
     return (
       <div>
         <Header/>
+        <Container>
+          <Tasks/>
+        </Container>
       </div>
     );
   }
