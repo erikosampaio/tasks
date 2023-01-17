@@ -32,9 +32,9 @@ class Tasks extends Component {
       })
     }
     if (done_tasks.length === 0) {
-      window.alert(`Don't exists tasks to will be eraser!`);
+      window.alert(`Don't exists tasks to be deleted!`);
     } else {
-      if (window.confirm(`Are you sure you want to delete all tasks done?"`)) {
+      if (window.confirm(`Are you sure you want to delete all tasks (${done_tasks.length}) finished?"`)) {
         {
           done_tasks.map((task, index) => {
             fetch(`http://localhost:3001/api/v1/tasks/${task.id}`, {method: 'DELETE'});
